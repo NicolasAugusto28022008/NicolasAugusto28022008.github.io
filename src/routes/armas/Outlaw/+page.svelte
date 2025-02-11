@@ -1,13 +1,13 @@
 <script>
     let weapon = {
-        name: "Vandal",
-        image: "/vandalcard.jpg",
-        description: "A Vandal é um rifle poderoso com dano constante e alta precisão, ideal para tiros certeiros.",
+        name: "Outlaw",
+        image: "/outlawcard.jpg",
+        description: "A Outlaw é um rifle de precisão semi-automático poderoso, capaz de eliminar inimigos com dois tiros rápidos no corpo. Ideal para jogadores agressivos que gostam de snipers.",
         attributes: [
-            "🔹 Tipo: Rifle",
+            "🔹 Tipo: Rifle de Precisão",
             "🔹 Cadência de Tiro: Média",
-            "🔹 Dano: Alto",
-            "🔹 Recuo: Difícil de controlar"
+            "🔹 Dano: Muito Alto",
+            "🔹 Recuo: Baixo"
         ]
     };
 </script>

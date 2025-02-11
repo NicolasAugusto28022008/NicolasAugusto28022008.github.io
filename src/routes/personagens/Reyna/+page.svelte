@@ -1,26 +1,26 @@
 <script>
-    const jett = {
-      name: "Jett",
-      description: "Jett é uma duelist radiante que usa a agilidade e o vento para se mover rapidamente pelo campo de batalha, surpreendendo seus inimigos.",
-      image: "/jett.jpg",
+    const reyna = {
+      name: "Reyna",
+      description: "Reyna é uma duelista letal, especializada em eliminar inimigos com precisão e se curar após cada abate.",
+      image: "/reyna.jpg",
       abilities: [
-        "Cloudburst: Crie uma nuvem de fumaça que obscurece a visão, podendo ser usada para bloquear a linha de visão dos inimigos.",
-        "Updraft: Aumente sua altura, permitindo saltos maiores.",
-        "Tailwind: Use um impulso para se mover rapidamente em qualquer direção.",
-        "Ultimate: Lançar um tornado devastador que empurra e causa dano aos inimigos em sua trajetória."
+        "Leer: Crie uma esfera que distorce a visão dos inimigos, tornando-os mais vulneráveis.",
+        "Dismisso: Após matar um inimigo, Releza uma habilidade que a torna invulnerável e se reposiciona.",
+        "Consumo: Consome a alma de um inimigo derrotado para se curar.",
+        "Ultimate: Transforme-se em um predador imbatível por um tempo, com habilidades aprimoradas."
       ]
     };
   </script>
   
-  <div class="jett-page">
-    <h1 class="jett-title">{jett.name}</h1>
-    <div class="jett-container">
-      <img class="jett-image" src={jett.image} alt={jett.name} />
-      <div class="jett-info">
-        <p class="jett-description">{jett.description}</p>
+  <div class="reyna-page">
+    <h1 class="reyna-title">{reyna.name}</h1>
+    <div class="reyna-container">
+      <img class="reyna-image" src={reyna.image} alt={reyna.name} />
+      <div class="reyna-info">
+        <p class="reyna-description">{reyna.description}</p>
         <h2>Habilidades:</h2>
-        <ul class="jett-abilities">
-          {#each jett.abilities as ability}
+        <ul class="reyna-abilities">
+          {#each reyna.abilities as ability}
             <li>{ability}</li>
           {/each}
         </ul>
@@ -29,7 +29,7 @@
   </div>
   
   <style>
-    .jett-page {
+    .reyna-page {
       background-image: url("/background-agentes.jpg");
       background-size: cover;
       background-repeat: no-repeat;
@@ -45,13 +45,13 @@
       text-align: center;
     }
   
-    .jett-title {
+    .reyna-title {
       font-size: 4em;
       font-weight: bold;
       margin-bottom: 20px;
     }
   
-    .jett-container {
+    .reyna-container {
       display: flex;
       justify-content: center;
       gap: 40px;
@@ -61,29 +61,29 @@
       padding: 20px;
     }
   
-    .jett-image {
+    .reyna-image {
       width: 300px;
       height: auto;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
   
-    .jett-info {
+    .reyna-info {
       max-width: 500px;
     }
   
-    .jett-description {
+    .reyna-description {
       font-size: 1.2em;
       margin-bottom: 20px;
     }
   
-    .jett-abilities {
+    .reyna-abilities {
       list-style-type: none;
       padding: 0;
       font-size: 1.1em;
     }
   
-    .jett-abilities li {
+    .reyna-abilities li {
       margin-bottom: 10px;
     }
   </style>

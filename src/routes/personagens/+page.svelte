@@ -1,30 +1,48 @@
 <script>
+	import { goto } from '$app/navigation';
 	let agents = [
-		{ name: 'jett', image: '/jett.jpg' },
+		{ name: 'Jett', image: '/jett.jpg' },
 		{ name: 'Phoenix', image: '/phoenix.jpg' },
-		{ name: 'Sage', image: '/sage.jpg' },
-		{ name: 'raze', image: '/raze.jpg' }
+		{ name: 'Reyna', image: '/reyna.jpg' },
+		{ name: 'Omen', image: '/omen.jpg' }
 	];
+
+	const handleClick = (name) => {
+		goto(`/personagens/${name}`);
+	};
 </script>
 
-<h1 class="title">AGENTES</h1>
+<div class="background">
+	<h1 class="title">AGENTES</h1>
 
-<div class="agents-container">
-	{#each agents as agent}
-		<div class="agent-card">
-			<img class="agent-image" src={agent.image} alt={agent.name} />
-			<div class="agent-name">{agent.name}</div>
-		</div>
-	{/each}
+	<div class="agents-container">
+		{#each agents as agent}
+			<div class="agent-card" on:click={() => handleClick(agent.name)}>
+				<img class="agent-image" src={agent.image} alt={agent.name} />
+				<div class="agent-name">{agent.name}</div>
+			</div>
+		{/each}
+	</div>
 </div>
 
 <style>
+	.background {
+		background-image: url("/background-agentes.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+	}
+
 	.title {
 		font-size: 500%;
 		color: white;
-        margin-top: 100px;
-        margin-left: 100px;
-        margin-bottom: 50px;
+		margin-bottom: 50px;
+		text-align: center;
 	}
 
 	.agents-container {
@@ -33,7 +51,6 @@
 		flex-wrap: wrap;
 		gap: 20px;
 		padding: 20px;
-		background-color: #0f1923;
 	}
 
 	.agent-card {
@@ -41,9 +58,10 @@
 		border-radius: 10px;
 		overflow: hidden;
 		text-align: center;
-		width: 20%;
+		width: 12%;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 		transition: transform 0.2s;
+		cursor: pointer;
 	}
 
 	.agent-card:hover {

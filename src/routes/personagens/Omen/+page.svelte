@@ -1,26 +1,26 @@
 <script>
-    const jett = {
-      name: "Jett",
-      description: "Jett é uma duelist radiante que usa a agilidade e o vento para se mover rapidamente pelo campo de batalha, surpreendendo seus inimigos.",
-      image: "/jett.jpg",
+    const omen = {
+      name: "Omen",
+      description: "Omen é um agente misterioso com habilidades focadas em manipular sombras para confundir seus inimigos e controlar o mapa.",
+      image: "/omen.jpg",
       abilities: [
-        "Cloudburst: Crie uma nuvem de fumaça que obscurece a visão, podendo ser usada para bloquear a linha de visão dos inimigos.",
-        "Updraft: Aumente sua altura, permitindo saltos maiores.",
-        "Tailwind: Use um impulso para se mover rapidamente em qualquer direção.",
-        "Ultimate: Lançar um tornado devastador que empurra e causa dano aos inimigos em sua trajetória."
+        "Shrouded Step: Teleporte para um local próximo, desaparecendo temporariamente.",
+        "Paranoia: Envie uma sombra através de uma linha reta para cegar e desorientar inimigos.",
+        "Dark Cover: Crie uma esfera de sombra que pode ser movida e usada para bloquear a visão.",
+        "Ultimate: Envie uma sombra para qualquer lugar do mapa, desorientando os inimigos e criando caos."
       ]
     };
   </script>
   
-  <div class="jett-page">
-    <h1 class="jett-title">{jett.name}</h1>
-    <div class="jett-container">
-      <img class="jett-image" src={jett.image} alt={jett.name} />
-      <div class="jett-info">
-        <p class="jett-description">{jett.description}</p>
+  <div class="omen-page">
+    <h1 class="omen-title">{omen.name}</h1>
+    <div class="omen-container">
+      <img class="omen-image" src={omen.image} alt={omen.name} />
+      <div class="omen-info">
+        <p class="omen-description">{omen.description}</p>
         <h2>Habilidades:</h2>
-        <ul class="jett-abilities">
-          {#each jett.abilities as ability}
+        <ul class="omen-abilities">
+          {#each omen.abilities as ability}
             <li>{ability}</li>
           {/each}
         </ul>
@@ -29,7 +29,7 @@
   </div>
   
   <style>
-    .jett-page {
+    .omen-page {
       background-image: url("/background-agentes.jpg");
       background-size: cover;
       background-repeat: no-repeat;
@@ -45,13 +45,13 @@
       text-align: center;
     }
   
-    .jett-title {
+    .omen-title {
       font-size: 4em;
       font-weight: bold;
       margin-bottom: 20px;
     }
   
-    .jett-container {
+    .omen-container {
       display: flex;
       justify-content: center;
       gap: 40px;
@@ -61,29 +61,29 @@
       padding: 20px;
     }
   
-    .jett-image {
+    .omen-image {
       width: 300px;
       height: auto;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
   
-    .jett-info {
+    .omen-info {
       max-width: 500px;
     }
   
-    .jett-description {
+    .omen-description {
       font-size: 1.2em;
       margin-bottom: 20px;
     }
   
-    .jett-abilities {
+    .omen-abilities {
       list-style-type: none;
       padding: 0;
       font-size: 1.1em;
     }
   
-    .jett-abilities li {
+    .omen-abilities li {
       margin-bottom: 10px;
     }
   </style>

@@ -4,17 +4,17 @@
   import "../global.css";
 
 	const personagens = [
-		{ type: 'characters', name: 'Jett', id: 1, description: 'Descrição do Jett' },
+		{ type: 'characters', name: 'Jett', id: 1, description: 'Descrição da Jett' },
 		{ type: 'characters', name: 'Phoenix', id: 2, description: 'Descrição do Phoenix' },
-		{ type: 'characters', name: 'Sage', id: 3, description: 'Descrição do Sage' },
-		{ type: 'characters', name: 'Raze', id: 4, description: 'Descrição do Raze' }
+		{ type: 'characters', name: 'Omen', id: 3, description: 'Descrição do Omen' },
+		{ type: 'characters', name: 'Reyna', id: 4, description: 'Descrição da Reyna' }
 	];
 
 	const armas = [
 		{ type: 'weapons', name: 'Vandal', id: 1, description: 'Descrição da Vandal' },
 		{ type: 'weapons', name: 'Phantom', id: 2, description: 'Descrição da Phantom' },
-		{ type: 'weapons', name: 'Sheriff', id: 3, description: 'Descrição do Sheriff' },
-		{ type: 'weapons', name: 'Operator', id: 4, description: 'Descrição do Operator' }
+		{ type: 'weapons', name: 'Odin', id: 3, description: 'Descrição do Odin' },
+		{ type: 'weapons', name: 'outlaw', id: 4, description: 'Descrição do outlow' }
 	];
 
 	const mapas = [
@@ -67,8 +67,10 @@
 	function selectItem(item) {
 		const basePath = item.type === 'characters' ? 'personagens' : item.type === 'weapons' ? 'armas' : 'mapas';
     query = ''
-		goto(`/${basePath}/${item.name.toLowerCase()}`);
+		goto(`/${basePath}/${item.name}`);
 	}
+
+	
 </script>
 
 <nav class="navbar navbar-expand-lg bg-light navbar-light">
@@ -91,9 +93,6 @@
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item">
 					<a class="nav-link" href="/" style="font-size: 30px;">INÍCIO</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/sobre" style="font-size: 30px;">SOBRE</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/personagens" style="font-size: 30px;">AGENTES</a>

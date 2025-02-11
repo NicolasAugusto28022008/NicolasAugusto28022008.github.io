@@ -1,11 +1,11 @@
 <script>
     let weapon = {
-        name: "Vandal",
-        image: "/vandalcard.jpg",
-        description: "A Vandal é um rifle poderoso com dano constante e alta precisão, ideal para tiros certeiros.",
+        name: "Odin",
+        image: "/odincard.jpg",
+        description: "A Odin é uma metralhadora pesada com alta taxa de disparo e grande carregador, perfeita para segurar bombsites e eliminar múltiplos inimigos rapidamente.",
         attributes: [
-            "🔹 Tipo: Rifle",
-            "🔹 Cadência de Tiro: Média",
+            "🔹 Tipo: Metralhadora",
+            "🔹 Cadência de Tiro: Muito Alta",
             "🔹 Dano: Alto",
             "🔹 Recuo: Difícil de controlar"
         ]
